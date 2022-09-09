@@ -8,6 +8,9 @@ class Supermarket:
         self.dictDairy={}
         self.dictGrain={}
         self.dictCleaning={}
+   
+        
+        
         
     def askDairy(self):
         listDairy=[]
