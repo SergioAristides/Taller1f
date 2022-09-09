@@ -8,7 +8,13 @@ class Supermarket:
         self.dictDairy={}
         self.dictGrain={}
         self.dictCleaning={}
-         
+    
+    
+        
+        
+        
+        
+          
             
     def imprimr(self):
         print(self.dictDairy)
@@ -16,8 +22,6 @@ class Supermarket:
         print(self.dictCleaning)
               
     def askDairy(self):
-        listDairy=[]
-        listCantDairy=[]
         bandera= TRUE
         while bandera:
             try:
@@ -26,24 +30,19 @@ class Supermarket:
                     try:
                         dairy=str(input("ingrese el nombre del lacteo:"))
                         cant=int(input("ingrese las cantidades de producto anterior: "))
-                        listDairy.append(dairy)
-                        listCantDairy.append(cant)
+                        self.dictDairy[dairy] = cant
                         if i==allDairy-1:
-                            bandera=False   
-                 
+                            bandera=False
                     except:
                             print("ingrese un tipo numerico")
-                   
-                self.dictDairy= dict(zip(listDairy,listCantDairy)) 
-       
+                    
+                break
             except:
                 print("ingrese un tipo numerico")
          
                 
 
     def askGrain(self):
-        listGrain=[]
-        listCantGrain=[]
         bandera=TRUE
         while bandera:
             try:
@@ -53,14 +52,13 @@ class Supermarket:
                         try:
                              Grain=str(input("ingrese el nombre del grano:"))
                              cant=int(input("ingrese las cantidades de producto anterior: "))
-                             listGrain.append(Grain)
-                             listCantGrain.append(cant)
+                             self.dictGrain[Grain]= cant
                              if i==allGrain-1:
                                  bandera=False 
                         except:
                             print("ingrese un tipo numerico")
                    
-                self.dictGrain= dict(zip(listGrain,listCantGrain)) 
+                
                 
             except:
                 print("ingrese un tipo numerico")
@@ -77,14 +75,13 @@ class Supermarket:
                         try:
                              cleaning=str(input("ingrese el nombre del implemento de aseo:"))
                              cant=int(input("ingrese las cantidades de producto anterior: "))
-                             listCleaning.append(cleaning)
-                             listCantCleaning.append(cant)
+                             self.dictCleaning[cleaning]= cant
                              if i==allcleaning-1:
                                  bandera=False 
                         except:
                             print("ingrese un tipo numerico")
                    
-                self.dictCleaning= dict(zip(listCleaning,listCantCleaning)) 
+                
                 
             except:
                 print("ingrese un tipo numerico")
