@@ -8,10 +8,13 @@ class Supermarket:
         self.dictDairy={}
         self.dictGrain={}
         self.dictCleaning={}
-   
-        
-        
-        
+         
+            
+    def imprimr(self):
+        print(self.dictDairy)
+        print(self.dictGrain)
+        print(self.dictCleaning)
+              
     def askDairy(self):
         listDairy=[]
         listCantDairy=[]
